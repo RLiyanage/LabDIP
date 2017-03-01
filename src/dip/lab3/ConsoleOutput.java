@@ -12,7 +12,7 @@ package dip.lab3;
 public class ConsoleOutput implements MessageOutput{
 
     @Override
-    public void writeMessage(String message) {
+    public final void writeMessage(String message) {
         System.out.println("Message: \n" + message);
     }
    

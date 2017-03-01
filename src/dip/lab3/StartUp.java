@@ -11,12 +11,12 @@ package dip.lab3;
  */
 public class StartUp {
     public static void main(String[] args) {
-       MessageInput keyboardInput = new KeyboardInput();
-       MessageOutput consoleOutput = new ConsoleOutput();
-       MessageInput fileInput = new FileInput();
-       
-       MessageService messageService = new MessageService(fileInput,consoleOutput);
-       //messageService.doRead();
-       messageService.readMessage();
+       MessageInput input = new KeyboardInput();
+       MessageOutput output = new GUIOutput();
+
+       MessageService messageService = new MessageService(input,output);
+       //MessageService messageService1 = new MessageService (input,output);       
+       messageService.produceMessage();
+       //messageService1.produceMessage();
     }
 }

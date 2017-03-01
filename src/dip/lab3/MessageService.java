@@ -13,22 +13,14 @@ public class MessageService {
     private MessageInput messageInput;
     private MessageOutput messageOutput;
     public MessageService(MessageInput messageInput,MessageOutput messageOutput){
-        setMessageInput(messageInput);
-        setMessageOutput(messageOutput);
-
+        this.messageInput = messageInput;
+        this.messageOutput = messageOutput;
     }
 
-    public void readMessage(){
+    public void produceMessage(){
         messageOutput.writeMessage(messageInput.pickUpMessage());
     }
 
-    public void setMessageInput(MessageInput messageInput) {
-        this.messageInput = messageInput;
-    }
 
-    public void setMessageOutput(MessageOutput messageOutput) {
-        this.messageOutput = messageOutput;
-    }
-    
     
 }
